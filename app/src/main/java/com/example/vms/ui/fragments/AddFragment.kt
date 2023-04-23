@@ -77,7 +77,19 @@ class AddFragment : Fragment() {
             val datePickerDialog = DatePickerDialog(v.context,
                 { view, year, monthOfYear, dayOfMonth
                     ->
-                    txtDate.setText("$dayOfMonth-0${monthOfYear + 1}-$year")
+
+                    if (monthOfYear+1 < 10){
+                        if(dayOfMonth<10){
+                        txtDate.setText("0$dayOfMonth-0${monthOfYear + 1}-$year")}
+                        else{
+                            txtDate.setText("$dayOfMonth-0${monthOfYear + 1}-$year")
+                    }}
+                    else{
+                        if(dayOfMonth<10){
+                            txtDate.setText("0$dayOfMonth-${monthOfYear + 1}-$year")}
+                        else{
+                            txtDate.setText("$dayOfMonth-${monthOfYear + 1}-$year")
+                        }}
                 },
 
                 mYear, mMonth, mDay
@@ -121,7 +133,19 @@ class AddFragment : Fragment() {
             val datePickerDialog = DatePickerDialog(v.context,
                 { view, year, monthOfYear, dayOfMonth
                     ->
-                    txtDate2.setText("$dayOfMonth-${monthOfYear + 1}-$year")
+
+                    if (monthOfYear+1 < 10){
+                        if(dayOfMonth<10){
+                            txtDate2.setText("0$dayOfMonth-0${monthOfYear + 1}-$year")}
+                        else{
+                            txtDate2.setText("$dayOfMonth-0${monthOfYear + 1}-$year")
+                        }}
+                    else{
+                        if(dayOfMonth<10){
+                            txtDate2.setText("0$dayOfMonth-${monthOfYear + 1}-$year")}
+                        else{
+                            txtDate2.setText("$dayOfMonth-${monthOfYear + 1}-$year")
+                        }}
                 },
 
                 mYear, mMonth, mDay

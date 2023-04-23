@@ -1,8 +1,11 @@
 package com.example.vms
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.TextView
+import java.io.File
 
 
 class VisitorSlip : AppCompatActivity() {
@@ -20,9 +23,7 @@ class VisitorSlip : AppCompatActivity() {
         setContentView(R.layout.visitor_slip)
         val bundle = intent.extras
         val myVariable = bundle?.getString("myKey")
-        // val textView = findViewById<TextView>(R.id.textView)
 
-//        textView.text = "The value is $myVariable"
         tv=findViewById(R.id.textView1)
         tv2=findViewById(R.id.textView2)
         tv3=findViewById(R.id.textView3)
@@ -50,6 +51,17 @@ class VisitorSlip : AppCompatActivity() {
         tv6.text=arr[5]
         tv7.text=arr[6]
 
+        val context = applicationContext
 
-    }
+        val deleteButton = findViewById<ImageButton>(R.id.deleteButton)
+        val del = File(context.filesDir, myVariable)
+        deleteButton.setOnClickListener {
+            if (del.exists()) {
+                val deleted = del.delete()
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+
+
+    }}}
 }
