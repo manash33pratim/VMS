@@ -19,7 +19,7 @@ import com.example.vms.VisitorSlip
 class ListFragment : Fragment() {
 
 
-    lateinit var lv: ListView
+    //lateinit var lv: ListView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

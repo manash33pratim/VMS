@@ -13,6 +13,7 @@ class VisitorSlip : AppCompatActivity() {
     lateinit var tv5 : TextView
     lateinit var tv6 : TextView
     lateinit var tv7 : TextView
+    lateinit var tvname: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,15 +30,18 @@ class VisitorSlip : AppCompatActivity() {
         tv5=findViewById(R.id.textView5)
         tv6=findViewById(R.id.textVw6)
         tv7=findViewById(R.id.textVw7)
+        tvname=findViewById(R.id.textViewname)
 
         val file = myVariable
         val fin = openFileInput(file)
+
         var c :Int
         var temp = ""
         while(fin.read().also{c = it }!=-1){
             temp += c.toChar().toString()
         }
         val arr = temp.split(",")
+        tvname.text=file.toString()
         tv.text=arr[0]
         tv2.text =arr[1]
         tv3.text=arr[2]

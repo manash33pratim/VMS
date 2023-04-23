@@ -32,7 +32,7 @@
     <EditText
 
         android:id="@+id/NameAdd"
-        android:textColorHint="@color/black"
+        android:textColorHint="#6C6B6B"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
 
 
     <EditText
-        android:textColorHint="@color/black"
+        android:textColorHint="#6C6B6B"
         android:textColor="@color/black"
 
         android:id="@+id/ReasonAdd"
@@ -86,7 +86,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:textColorHint="@color/black"
+            android:textColorHint="#6C6B6B"
 
             android:hint="Your Phone"
             android:inputType="phone"
@@ -98,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
-            android:textColorHint="@color/black"
+            android:textColorHint="#6C6B6B"
 
 
             android:hint="Address"
@@ -155,7 +155,7 @@ android:textColor="@color/black"
             android:layout_gravity="bottom"
             android:layout_marginRight="10dp"
             android:hint="Time"
-            android:textColorHint="@color/black"
+            android:textColorHint="#6C6B6B"
 
             android:layout_weight="1"
             android:background="#BFB3B3"
@@ -169,7 +169,7 @@ android:textColor="@color/black"
             android:layout_gravity="bottom"
             android:hint="Date"
             android:layout_weight="1"
-            android:textColorHint="@color/black"
+            android:textColorHint="#6C6B6B"
 
             android:background="#8891C5"
             android:textColor="@color/black"
@@ -201,7 +201,7 @@ android:textColor="@color/black"
             android:hint="Time"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:textColorHint="@color/black"
+            android:textColorHint="#6C6B6B"
 
             android:background="#BFB3B3"
             android:textColor="@color/black"
@@ -216,7 +216,7 @@ android:textColor="@color/black"
 
             android:layout_weight="1"
             android:hint="Date"
-            android:textColorHint="@color/black"
+            android:textColorHint="#6C6B6B"
 
             android:background="#8891C5"
             android:textColor="@color/black"
