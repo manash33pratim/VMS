@@ -10,7 +10,7 @@
     tools:context=".ui.fragments.SearchFragment">
 
     <EditText
-
+        android:textColorHint="@color/black"
         android:id="@+id/searchName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,10 +24,12 @@
         />
     <Button
         android:id="@+id/btnshow"
+
         android:text="Find Visitor details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:textColor="@color/white"
         />
 
     <LinearLayout
@@ -59,32 +61,32 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="10dp"
-            android:orientation="vertical"
 
             android:background="@color/white"
 
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="Lovely Professional University"
+                android:textColor="@color/black"
                 android:textSize="21dp"
-                android:textStyle="bold"
-               android:layout_gravity="center" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:text="University Checkin Gate Pass"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                />
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -99,22 +101,20 @@
                     android:layout_marginStart="16dp"
                     android:layout_weight="0"
                     android:text="Name:"
+                    android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-            />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/showName"
                     android:layout_width="wrap_content"
                     android:layout_height="22dp"
-                    android:layout_weight="1"
                     android:layout_marginStart="70dp"
-
+                    android:layout_weight="1"
 
 
                     android:textColor="@color/black"
-                    android:textSize="15sp"
-                     />
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -130,20 +130,19 @@
                     android:layout_marginStart="16dp"
                     android:layout_weight="0"
                     android:text="Purpose of Visit:"
+                    android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/showReason"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-
                     android:layout_marginStart="5dp"
+
+                    android:layout_weight="1"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
-                     />
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -159,23 +158,22 @@
                     android:layout_marginStart="16dp"
                     android:layout_weight="0"
                     android:text="Chackin Time:"
+                    android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                     />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/showtimeStart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:layout_weight="1"
-
-
                     android:layout_marginStart="20dp"
 
+
+                    android:layout_weight="1"
+
                     android:textColor="@color/black"
-                    android:textSize="15sp"
-                   />
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -192,21 +190,20 @@
                     android:layout_marginStart="16dp"
                     android:layout_weight="0"
                     android:text="Chackin Date:"
+                    android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                     />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/showdateStart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-
                     android:layout_marginStart="23dp"
 
+                    android:layout_weight="1"
+
                     android:textColor="@color/black"
-                    android:textSize="15sp"
-                     />
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -222,9 +219,9 @@
                     android:layout_marginStart="16dp"
                     android:layout_weight="0"
                     android:text="Checkout Time:"
+                    android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                     />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/showtimeEnd"
@@ -234,8 +231,7 @@
                     android:layout_weight="1"
 
                     android:textColor="@color/black"
-                    android:textSize="15sp"
-                    />
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -251,21 +247,20 @@
                     android:layout_marginStart="16dp"
                     android:layout_weight="0"
                     android:text="Checkout Date:"
+                    android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                   />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/showdateEnd"
                     android:layout_width="52dp"
-                    android:layout_weight="1"
                     android:layout_height="20dp"
-
                     android:layout_marginStart="15dp"
 
+                    android:layout_weight="1"
+
                     android:textColor="@color/black"
-                    android:textSize="15sp"
-                     />
+                    android:textSize="15sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -281,20 +276,19 @@
                     android:layout_marginStart="16dp"
                     android:layout_weight="0"
                     android:text="Phone No.:"
+                    android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/showPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="43dp"
+                    android:layout_weight="1"
                     android:textColor="@color/black"
                     android:textSize="15sp"
-                    android:visibility="visible"
-                     />
+                    android:visibility="visible" />
             </LinearLayout>
 
             <LinearLayout
@@ -312,26 +306,20 @@
                     android:text="Address:"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    />
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/showAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="57dp"
+                    android:layout_weight="1"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
-                    />
+                    android:textSize="15sp" />
             </LinearLayout>
 
 
-
-
-
-
-
-    </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
 
