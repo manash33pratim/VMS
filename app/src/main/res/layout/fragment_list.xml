@@ -26,12 +26,14 @@
 
       </RelativeLayout>
     <ListView
+        android:background="#CCD5C9"
         android:id="@+id/list"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
+        android:layout_margin="20dp"
         android:textColor="@color/black"
-        android:layout_marginLeft="30dp"
+
 
         />
 
