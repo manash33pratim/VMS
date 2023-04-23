@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.example.vms.R
 
 
@@ -24,6 +26,7 @@ class SearchFragment : Fragment() {
     lateinit var tvdateStart : TextView
     lateinit var tvtimeEnd : TextView
     lateinit var tvdateEnd : TextView
+    lateinit var slip: LinearLayout
 
 
     override fun onCreateView(
@@ -42,6 +45,9 @@ class SearchFragment : Fragment() {
         tvdateStart=v.findViewById(R.id.showdateStart)
         tvtimeEnd=v.findViewById(R.id.showtimeEnd)
         tvdateEnd=v.findViewById(R.id.showdateEnd)
+        slip=v.findViewById(R.id.slipLayout)
+
+        slip.visibility=View.INVISIBLE
 
         val fileName = v.findViewById<EditText>(R.id.searchName)
         show.setOnClickListener()
@@ -58,7 +64,7 @@ class SearchFragment : Fragment() {
                     temp += c.toChar().toString()
                 }
                 val arr = temp.split(",")
-
+                slip.visibility=View.VISIBLE
                 tvName.text=file
                 tvReason.text =arr[0]
                 tvPhone.text=arr[1]
@@ -68,7 +74,7 @@ class SearchFragment : Fragment() {
                 tvtimeEnd.text=arr[5]
                 tvdateEnd.text=arr[6]
 
-                Toast.makeText(context,"This is the File", Toast.LENGTH_LONG).show()
+                Toast.makeText(context,"Visitor found", Toast.LENGTH_LONG).show()
             }
 
 

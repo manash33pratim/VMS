@@ -199,7 +199,7 @@ class AddFragment : Fragment() {
             txtDate2.text=""
             txtTime2.text=""
 
-
+            checkbox.setChecked(false)
         }}
 
         return v
@@ -226,7 +226,7 @@ class AddFragment : Fragment() {
 
         if (min < 10) {
 
-            return ("$hour:0$minshow $am_pm")
+            return ("$hour:$minshow $am_pm")
         }else
         {return ("$hour:$minshow $am_pm")}
 
