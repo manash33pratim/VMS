@@ -18,8 +18,6 @@ import com.example.vms.VisitorSlip
 
 class ListFragment : Fragment() {
 
-
-    //lateinit var lv: ListView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,8 +25,6 @@ class ListFragment : Fragment() {
         (activity as AppCompatActivity).supportActionBar?.title = "Visitor List"
 
         val v=inflater.inflate(R.layout.fragment_list, container, false)
-//        b2=v.findViewById(R.id.b2)
-//    b2.setOnClickListener{
 
         val context = context as MainActivity
 
@@ -38,18 +34,15 @@ class ListFragment : Fragment() {
         val adapter = ArrayAdapter(context, android.R.layout.simple_list_item_1, savedFiles)
         lv.adapter = adapter
         lv.setOnItemClickListener { parent, view, position, id ->
-            // Handle click event here
-            val intValue = id.toInt()
+      val intValue = id.toInt()
             val item = lv.getItemAtPosition(intValue).toString()
-            //Toast.makeText(requireContext(), "Item clicked:$item ", Toast.LENGTH_SHORT).show()
-            val intent = Intent(requireContext(), VisitorSlip::class.java)
+             val intent = Intent(requireContext(), VisitorSlip::class.java)
 
-//Add any necessary extras to the intent
+
             val bundle = Bundle()
             bundle.putString("myKey", item)
             intent.putExtras(bundle)
-//
-            // Start the new activity
+
             startActivity(intent)
         }
 
