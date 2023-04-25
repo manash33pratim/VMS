@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:inputType="textPersonName"
+
         android:text="Reason"
         tools:layout_editor_absoluteX="74dp"
         tools:layout_editor_absoluteY="115dp" />
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="time"
         android:text="Checkintime"
         tools:layout_editor_absoluteX="74dp"
         tools:layout_editor_absoluteY="115dp" />
@@ -37,19 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="date"
         android:text="checkindate"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="115dp" />
-
-    <EditText
-        android:id="@+id/e7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="checkoutdate"
         tools:layout_editor_absoluteX="74dp"
         tools:layout_editor_absoluteY="115dp" />
 
@@ -59,8 +48,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="time"
         android:text="checkouttime"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="115dp" />
+
+    <EditText
+        android:id="@+id/e7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="date"
+        android:text="checkoutdate"
         tools:layout_editor_absoluteX="74dp"
         tools:layout_editor_absoluteY="115dp" />
 
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="phone"
             android:text="phone"
             tools:layout_editor_absoluteX="74dp"
             tools:layout_editor_absoluteY="115dp" />
