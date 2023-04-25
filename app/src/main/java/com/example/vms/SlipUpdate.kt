@@ -44,7 +44,7 @@ class SlipUpdate : AppCompatActivity() {
 
         val fle = abc
         val fin = openFileInput(fle)
-        supportActionBar?.title = "Updating $abc"
+        supportActionBar?.title = "VMS"
         tvname.setText(abc)
         var c :Int
         var temp = ""
