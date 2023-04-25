@@ -3,6 +3,7 @@ package com.example.vms
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import java.io.File
@@ -17,6 +18,8 @@ class VisitorSlip : AppCompatActivity() {
     lateinit var tv6 : TextView
     lateinit var tv7 : TextView
     lateinit var tvname: TextView
+    lateinit var u: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,17 +54,25 @@ class VisitorSlip : AppCompatActivity() {
         tv6.text=arr[5]
         tv7.text=arr[6]
 
-        val context = applicationContext
+       // val context = applicationContext
 
         val deleteButton = findViewById<ImageButton>(R.id.deleteButton)
-        val del = File(context.filesDir, myVariable)
+        val del = File(applicationContext.filesDir, myVariable)
         deleteButton.setOnClickListener {
             if (del.exists()) {
-                val deleted = del.delete()
+              //  val deleted = del.delete()
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
 
 
-    }}}
+    }}
+     u=findViewById(R.id.hello)
+        u.setOnClickListener {
+            val i=Intent(this, SlipUpdate::class.java)
+            i.putExtra("value",myVariable)
+            startActivity(i)
+
+        }
+    }
 }
