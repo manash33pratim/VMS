@@ -3,8 +3,11 @@ package com.example.vms
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import java.io.File
 
 
@@ -18,20 +21,27 @@ class VisitorSlip : AppCompatActivity() {
     lateinit var tv7 : TextView
     lateinit var tvname: TextView
 
+    lateinit var u: Button
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.visitor_slip)
         val bundle = intent.extras
         val myVariable = bundle?.getString("myKey")
 
-        tv=findViewById(R.id.textView1)
-        tv2=findViewById(R.id.textView2)
-        tv3=findViewById(R.id.textView3)
-        tv4=findViewById(R.id.textView4)
-        tv5=findViewById(R.id.textView5)
-        tv6=findViewById(R.id.textVw6)
-        tv7=findViewById(R.id.textVw7)
+        tv=findViewById(R.id.address)
+        tv2=findViewById(R.id.phone)
+        tv3=findViewById(R.id.reason)
+        tv4=findViewById(R.id.starttime)
+        tv5=findViewById(R.id.startdate)
+        tv6=findViewById(R.id.endtime)
+        tv7=findViewById(R.id.enddate)
         tvname=findViewById(R.id.textViewname)
+
+
+
+
 
         val file = myVariable
         val fin = openFileInput(file)
@@ -51,17 +61,45 @@ class VisitorSlip : AppCompatActivity() {
         tv6.text=arr[5]
         tv7.text=arr[6]
 
-        val context = applicationContext
+
 
         val deleteButton = findViewById<ImageButton>(R.id.deleteButton)
-        val del = File(context.filesDir, myVariable)
+        val del = File(applicationContext.filesDir, myVariable)
         deleteButton.setOnClickListener {
             if (del.exists()) {
-                val deleted = del.delete()
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
+//-----------------------------------------------------------------------------------------------
+                val builder= AlertDialog.Builder(this) // builder: local variable
+
+                builder.setTitle("Remove") //for title
+                    .setMessage("Do you want to remove $myVariable ?")
+                    //.setCancelable(true)
+                    .setIcon(R.drawable.ic_delete)
+                builder.setPositiveButton("Yes"){
+                        dialogInterface, which->
+                    del.delete()
+
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    Toast.makeText(this, "Removed $myVariable successfully", Toast.LENGTH_SHORT).show()
+                }
+                builder.setNegativeButton("No"){dialog, which->
+
+                }
+
+                val ad: AlertDialog =builder.create()
+                ad.show()
+            }
+//------------------------------------------------------------------------------------------------------------
 
 
-    }}}
+    }
+     u=findViewById(R.id.hello)
+        u.setOnClickListener {
+            val intent=Intent(this, SlipUpdate::class.java)
+            intent.putExtra("value",myVariable)
+            startActivity(intent)
+
+        }
+    }
 }

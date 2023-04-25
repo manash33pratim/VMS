@@ -6,11 +6,14 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/splash"
+        android:icon="@drawable/applogo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.VMS"
         tools:targetApi="31">
+        <activity
+            android:name=".SlipUpdate"
+            android:exported="false" />
         <activity
             android:name=".VisitorSlip"
             android:exported="false" />

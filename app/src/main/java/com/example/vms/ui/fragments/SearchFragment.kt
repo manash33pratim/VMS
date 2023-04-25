@@ -11,6 +11,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.isVisible
 import com.example.vms.R
 
@@ -26,7 +27,7 @@ class SearchFragment : Fragment() {
     lateinit var tvdateStart : TextView
     lateinit var tvtimeEnd : TextView
     lateinit var tvdateEnd : TextView
-    lateinit var slip: LinearLayout
+    lateinit var slip: CardView
 
 
     override fun onCreateView(
@@ -77,6 +78,8 @@ class SearchFragment : Fragment() {
                 Toast.makeText(context,"Visitor found", Toast.LENGTH_LONG).show()
             }
             catch (e:java.lang.Exception){
+
+                Toast.makeText(context,"Visitor not found", Toast.LENGTH_LONG).show()
             }
         }
         return v

@@ -3,11 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/backgroundimg1"
     android:layout_height="match_parent"
-    tools:context=".VisitorSlip">
-
+    android:orientation="vertical"
+    tools:context=".SlipUpdate">
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -16,7 +15,7 @@
         android:layout_height="35dp"
         android:background="@drawable/textview_round2"
         android:gravity="center"
-        android:text="VISITOR INFORMATION"
+        android:text="Update Visitor infromation"
         android:textColor="@color/white"
         android:textStyle="bold"
         />
@@ -28,8 +27,7 @@
         app:cardCornerRadius="20dp"
         app:cardElevation="50dp"
 
-        android:layout_marginTop="50dp"
-        app:cardBackgroundColor="#A6CFA8">
+        android:layout_marginTop="50dp">
 
         <LinearLayout
             android:layout_margin="20dp"
@@ -37,63 +35,21 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:gravity="center"
-
-            android:background="#DEE8EF"
+            android:background="#DDBBC4"
             android:orientation="vertical">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:orientation="horizontal">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="0"
-                    android:text="Name:"
-                    android:layout_gravity="bottom"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:id="@+id/deleteButton"
-
-                        android:layout_width="33dp"
-                        android:layout_height="35dp"
-                        android:layout_gravity="end"
-                        android:src="@drawable/ic_delete"
-
-
-                        />
-
-                    <TextView
-                        android:id="@+id/textViewname"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="70dp"
-                        android:hint="NA"
-                        android:textSize="15sp" />
-                </LinearLayout>
-
-
-            </LinearLayout>
+<TextView
+    android:id="@+id/visitorname"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:textSize="30sp"
+    android:hint="Visitor name"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -107,13 +63,15 @@
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/reason"
+                <EditText
+                    android:id="@+id/e3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="top"
+
                     android:layout_marginStart="5dp"
                     android:hint="NA"
+
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -121,7 +79,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -130,18 +88,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_weight="0"
-                    android:text="Chackin Time:"
+                    android:text="Checkin Time:"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/starttime"
+                <EditText
+                    android:id="@+id/e4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="top"
                     android:layout_marginStart="20dp"
                     android:hint="NA"
+                    android:inputType="time"
+
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -149,7 +109,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -159,18 +119,20 @@
 
                     android:layout_marginStart="16dp"
                     android:layout_weight="0"
-                    android:text="Chackin Date:"
+                    android:text="Checkin Date:"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/startdate"
+                <EditText
+                    android:id="@+id/e5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="top"
                     android:layout_marginStart="23dp"
                     android:hint="NA"
+                    android:inputType="date"
+
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -178,7 +140,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -192,11 +154,11 @@
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/endtime"
+                <EditText
+                    android:id="@+id/e6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="top"
                     android:layout_marginStart="10dp"
                     android:hint="NA"
                     android:textSize="16sp" />
@@ -206,7 +168,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -220,11 +182,11 @@
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/enddate"
+                <EditText
+                    android:id="@+id/e7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="top"
                     android:layout_marginStart="15dp"
                     android:hint="NA"
                     android:textSize="16sp" />
@@ -234,7 +196,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -248,11 +210,12 @@
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/phone"
+
+                <EditText
+                    android:id="@+id/e2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="top"
                     android:layout_marginStart="43dp"
                     android:hint="NA"
                     android:textSize="16sp" />
@@ -262,7 +225,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -276,22 +239,23 @@
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/address"
+                <EditText
+                    android:id="@+id/e1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="top"
                     android:layout_marginStart="57dp"
                     android:hint="NA"
                     android:textSize="16sp" />
 
 
             </LinearLayout>
-<Button
-    android:id="@+id/hello"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Update"/>
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:text="Save details"/>
 
 
 
@@ -302,6 +266,7 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
 
 
 
