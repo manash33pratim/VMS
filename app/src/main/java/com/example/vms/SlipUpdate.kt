@@ -35,6 +35,28 @@ class SlipUpdate : AppCompatActivity() {
         e6 = findViewById(R.id.e6)
         e7 = findViewById(R.id.e7)
 
+        val fle = abc
+        val fin = openFileInput(fle)
+
+        var c :Int
+        var temp = ""
+        while(fin.read().also{c = it }!=-1){
+            temp += c.toChar().toString()
+        }
+        val arr = temp.split(",")
+        //tvname.text=fle.toString()
+        e1.setText(arr[0])
+        e2.setText(arr[1])
+        e3.setText(arr[2])
+        e4.setText(arr[3])
+        e5.setText(arr[4])
+        e6.setText(arr[5])
+        e7.setText(arr[6])
+
+
+
+
+
         b1= findViewById(R.id.button)
         val inputStream = FileInputStream(file)
         val reader = BufferedReader(InputStreamReader(inputStream))

@@ -27,14 +27,17 @@ class VisitorSlip : AppCompatActivity() {
         val bundle = intent.extras
         val myVariable = bundle?.getString("myKey")
 
-        tv=findViewById(R.id.textView1)
-        tv2=findViewById(R.id.textView2)
-        tv3=findViewById(R.id.textView3)
-        tv4=findViewById(R.id.textView4)
-        tv5=findViewById(R.id.textView5)
-        tv6=findViewById(R.id.textVw6)
-        tv7=findViewById(R.id.textVw7)
+        tv=findViewById(R.id.address)
+        tv2=findViewById(R.id.phone)
+        tv3=findViewById(R.id.reason)
+        tv4=findViewById(R.id.starttime)
+        tv5=findViewById(R.id.startdate)
+        tv6=findViewById(R.id.endtime)
+        tv7=findViewById(R.id.enddate)
         tvname=findViewById(R.id.textViewname)
+
+
+
 
         val file = myVariable
         val fin = openFileInput(file)
@@ -69,9 +72,9 @@ class VisitorSlip : AppCompatActivity() {
     }}
      u=findViewById(R.id.hello)
         u.setOnClickListener {
-            val i=Intent(this, SlipUpdate::class.java)
-            i.putExtra("value",myVariable)
-            startActivity(i)
+            val intent=Intent(this, SlipUpdate::class.java)
+            intent.putExtra("value",myVariable)
+            startActivity(intent)
 
         }
     }
