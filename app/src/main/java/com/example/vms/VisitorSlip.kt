@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import java.io.File
 
 
@@ -63,11 +64,12 @@ class VisitorSlip : AppCompatActivity() {
         val del = File(applicationContext.filesDir, myVariable)
         deleteButton.setOnClickListener {
             if (del.exists()) {
-              //  val deleted = del.delete()
+              val deleted = del.delete()
+
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
-
+                Toast.makeText(this, "Deleted successfully", Toast.LENGTH_SHORT).show()
 
     }}
      u=findViewById(R.id.hello)

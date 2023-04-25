@@ -77,6 +77,8 @@ class SearchFragment : Fragment() {
                 Toast.makeText(context,"Visitor found", Toast.LENGTH_LONG).show()
             }
             catch (e:java.lang.Exception){
+
+                Toast.makeText(context,"Visitor not found", Toast.LENGTH_LONG).show()
             }
         }
         return v

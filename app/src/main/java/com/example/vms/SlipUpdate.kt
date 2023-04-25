@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import java.io.*
 
 class SlipUpdate : AppCompatActivity() {
@@ -87,7 +88,7 @@ class SlipUpdate : AppCompatActivity() {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
-
+                Toast.makeText(context,"Updated successfully", Toast.LENGTH_LONG).show()
             }
 
 
