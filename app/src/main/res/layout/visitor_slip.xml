@@ -9,14 +9,18 @@
     tools:context=".VisitorSlip">
 
     <TextView
-
-        android:layout_marginTop="50dp"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:textSize="20dp"
+        android:layout_height="35dp"
+        android:background="@drawable/textview_round2"
         android:gravity="center"
-        android:text="Visitor infromation" />
+        android:text="VISITOR INFORMATION"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

@@ -73,15 +73,15 @@ class SlipUpdate : AppCompatActivity() {
           //-----------------------------------
             val builder= AlertDialog.Builder(this) // builder: local variable
 
-            builder.setTitle("My Alert Dialog") //for title
-                .setMessage("Do you want to close it...?...:")
+            builder.setTitle("Save Information") //for title
+                .setMessage("Do you want to save it?")
                 //.setCancelable(true)
 
 
-                .setIcon(R.drawable.alerticon)
+                .setIcon(R.drawable.save)
 
 
-            builder.setPositiveButton("Yes"){
+            builder.setPositiveButton("Save"){
                     dialogInterface, which->
                 if (line != null) {
                     val values = line.split(",")
@@ -114,7 +114,7 @@ class SlipUpdate : AppCompatActivity() {
             }
 
 
-            builder.setNegativeButton("No"){dialog, which->
+            builder.setNegativeButton("Cancel"){dialog, which->
 
             }
 

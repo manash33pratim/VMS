@@ -7,34 +7,46 @@
     android:background="@drawable/backgroundimg1"
     tools:context=".ui.fragments.ListFragment">
 
-      <RelativeLayout
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="30dp"
-          android:layout_marginHorizontal="80dp">
-          <TextView
-              style="@style/TextAppearance.MaterialComponents.Headline6"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-                android:gravity="center"
-              android:layout_gravity="center"
-              android:layout_marginTop="10dp"
-              android:textColor="@color/black"
-
-              android:text="Visitor List"
-              android:textSize="20sp"/>
-
-      </RelativeLayout>
-    <ListView
-        android:background="#CCD5C9"
-        android:id="@+id/list"
-        android:layout_width="fill_parent"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_margin="20dp"
-        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="80dp">
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/textview_round1"
+
+            android:text="Visitor List"
+            android:textSize="25sp"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/listview_bg"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        >
+        <ListView
+            android:background="#DDDDDA"
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
 
 
-        />
+            />
+    </LinearLayout>
+
 
 </LinearLayout>
