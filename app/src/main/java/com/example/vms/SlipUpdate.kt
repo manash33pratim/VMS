@@ -21,6 +21,7 @@ class SlipUpdate : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.slip_update)
+
         val value = intent.getStringExtra("value")
         val abc = value.toString()
         val context = applicationContext
@@ -37,7 +38,7 @@ class SlipUpdate : AppCompatActivity() {
 
         val fle = abc
         val fin = openFileInput(fle)
-
+        supportActionBar?.title = "Updating $abc"
         var c :Int
         var temp = ""
         while(fin.read().also{c = it }!=-1){
