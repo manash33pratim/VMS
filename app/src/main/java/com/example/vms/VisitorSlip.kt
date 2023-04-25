@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import java.io.File
 
 
@@ -19,6 +20,7 @@ class VisitorSlip : AppCompatActivity() {
     lateinit var tv6 : TextView
     lateinit var tv7 : TextView
     lateinit var tvname: TextView
+
     lateinit var u: Button
 
 
@@ -36,6 +38,7 @@ class VisitorSlip : AppCompatActivity() {
         tv6=findViewById(R.id.endtime)
         tv7=findViewById(R.id.enddate)
         tvname=findViewById(R.id.textViewname)
+
 
 
 
@@ -58,20 +61,39 @@ class VisitorSlip : AppCompatActivity() {
         tv6.text=arr[5]
         tv7.text=arr[6]
 
-       // val context = applicationContext
+
 
         val deleteButton = findViewById<ImageButton>(R.id.deleteButton)
         val del = File(applicationContext.filesDir, myVariable)
         deleteButton.setOnClickListener {
             if (del.exists()) {
-              val deleted = del.delete()
+//-----------------------------------------------------------------------------------------------
+                val builder= AlertDialog.Builder(this) // builder: local variable
 
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-                Toast.makeText(this, "Deleted successfully", Toast.LENGTH_SHORT).show()
+                builder.setTitle("Remove") //for title
+                    .setMessage("Do you want to remove $myVariable ?")
+                    //.setCancelable(true)
+                    .setIcon(R.drawable.ic_delete)
+                builder.setPositiveButton("Yes"){
+                        dialogInterface, which->
+                    del.delete()
 
-    }}
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    Toast.makeText(this, "Removed $myVariable successfully", Toast.LENGTH_SHORT).show()
+                }
+                builder.setNegativeButton("No"){dialog, which->
+
+                }
+
+                val ad: AlertDialog =builder.create()
+                ad.show()
+            }
+//------------------------------------------------------------------------------------------------------------
+
+
+    }
      u=findViewById(R.id.hello)
         u.setOnClickListener {
             val intent=Intent(this, SlipUpdate::class.java)

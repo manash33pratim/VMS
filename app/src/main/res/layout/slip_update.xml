@@ -3,15 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/backgroundimg1"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SlipUpdate">
+    <TextView
+
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Update Visitor infromation" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="8dp"
-        android:background="@color/green_700"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="50dp"
+
         android:layout_marginTop="50dp">
 
         <LinearLayout
@@ -20,16 +31,21 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:gravity="center"
-            android:background="#E1B5C2"
+            android:background="#DDBBC4"
             android:orientation="vertical">
-
-
-
+<TextView
+    android:id="@+id/visitorname"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:textSize="30sp"
+    android:hint="Visitor name"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -50,7 +66,8 @@
                     android:layout_gravity="top"
 
                     android:layout_marginStart="5dp"
-                    android:text="Reason"
+                    android:hint="NA"
+
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -58,7 +75,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -78,8 +95,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginStart="20dp"
+                    android:hint="NA"
                     android:inputType="time"
-                    android:text="Checkintime"
+
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -87,7 +105,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -108,8 +126,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginStart="23dp"
+                    android:hint="NA"
                     android:inputType="date"
-                    android:text="checkindate"
+
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -117,7 +136,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -137,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginStart="10dp"
-                    android:hint="end time"
+                    android:hint="NA"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -145,7 +164,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -165,7 +184,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginStart="15dp"
-                    android:hint="end date"
+                    android:hint="NA"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -173,7 +192,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -194,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginStart="43dp"
-                    android:hint="Phone"
+                    android:hint="NA"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -202,7 +221,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -222,9 +241,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     android:layout_marginStart="57dp"
-                    android:hint="Address"
+                    android:hint="NA"
                     android:textSize="16sp" />
-
 
 
             </LinearLayout>
@@ -232,7 +250,8 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="Update"/>
+                android:layout_marginTop="10dp"
+                android:text="Save details"/>
 
 
 

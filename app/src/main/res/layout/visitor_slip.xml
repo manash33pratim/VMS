@@ -3,23 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundimg1"
     android:layout_height="match_parent"
     tools:context=".VisitorSlip">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Visitor infromation" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="50dp"
 
-        app:cardCornerRadius="16dp"
-        app:cardElevation="8dp"
-        android:layout_marginTop="150dp">
+        android:layout_marginTop="50dp"
+        app:cardBackgroundColor="#A6CFA8">
 
         <LinearLayout
             android:layout_margin="20dp"
@@ -27,6 +33,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:gravity="center"
+
             android:background="#DEE8EF"
             android:orientation="vertical">
 
@@ -72,7 +79,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="70dp"
-                        android:hint="name"
+                        android:hint="NA"
                         android:textSize="15sp" />
                 </LinearLayout>
 
@@ -102,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="5dp"
-                    android:hint="reason"
+                    android:hint="NA"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -129,8 +136,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:hint="start time"
                     android:layout_marginStart="20dp"
+                    android:hint="NA"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -155,11 +162,11 @@
 
                 <TextView
                     android:id="@+id/startdate"
-                    android:layout_marginStart="23dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:hint="start date"
+                    android:layout_marginStart="23dp"
+                    android:hint="NA"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -186,8 +193,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:hint="end time"
                     android:layout_marginStart="10dp"
+                    android:hint="NA"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -211,11 +218,11 @@
 
                 <TextView
                     android:id="@+id/enddate"
-                    android:layout_marginStart="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:hint="end date"
+                    android:layout_marginStart="15dp"
+                    android:hint="NA"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -243,7 +250,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="43dp"
-                    android:hint="Phone"
+                    android:hint="NA"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -271,7 +278,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="57dp"
-                    android:hint="Address"
+                    android:hint="NA"
                     android:textSize="16sp" />
 
 

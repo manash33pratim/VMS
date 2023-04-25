@@ -14,6 +14,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     android:layout_marginRight="15dp"
     android:layout_marginLeft="15dp"
     >
@@ -157,6 +158,7 @@ android:textColor="@color/black"
             android:hint="Time"
             android:textColorHint="#6C6B6B"
 
+
             android:layout_weight="1"
             android:background="#BFB3B3"
             android:textColor="@color/black"
@@ -234,6 +236,7 @@ android:textColor="@color/black"
 
     <Button
         android:id="@+id/btnsave"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
