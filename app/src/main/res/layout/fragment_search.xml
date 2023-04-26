@@ -19,7 +19,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/editext_1"
         android:hint="Name"
-
+        android:padding="10dp"
         android:textColor="@color/black"
         android:textColorHint="#6C6B6B"
 
